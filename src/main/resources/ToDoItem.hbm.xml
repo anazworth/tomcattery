@@ -1,0 +1,23 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name = "com.anazworth.tomcattery.ToDoItem" table = "TODO_ITEMS">
+
+        <meta attribute = "class-description">
+            This class contains the TodoItem.
+        </meta>
+
+        <id name = "id" type = "long" column = "id">
+            <generator class="native"/>
+        </id>
+
+        <property name = "task" column = "task" type = "string"/>
+        <property name = "completed" column = "completed" type = "boolean"/>
+        <property name = "dateCreated" column = "dateCreated" type = "string"/>
+        <property name = "dateCompleted" column = "dateCompleted" type = "string"/>
+
+    </class>
+</hibernate-mapping>
