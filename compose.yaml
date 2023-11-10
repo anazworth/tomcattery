@@ -1,16 +1,15 @@
-version: '3.3'
+version: "3.3"
 
 services:
   mysql-db:
     image: mysql:8.1.0
     environment:
-      MYSQL_DATABASE: 'todoDB'
-      MYSQL_ROOT_PASSWORD: 'password'
+      MYSQL_DATABASE: "todoDB"
+      MYSQL_ROOT_PASSWORD: "password"
 
   todo-app:
     build: .
     ports:
-      - '8080:8080'
+      - "8080:8080"
     depends_on:
-        - mysql-db
->>>>>>> ff8347f (Creating WAR file deployment via compose)
+      - mysql-db
