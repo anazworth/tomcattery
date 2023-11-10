@@ -7,9 +7,8 @@ import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
 import org.hibernate.cfg.Configuration;
 
-@WebServlet(name = "todoServlet", value = "/")
 public class ToDoServlet extends HttpServlet {
-    private String url = "/Gradle___com_anazworth___tomcattery_1_0_SNAPSHOT_war/";
+    private String url = "/app";
     private final ToDoService todo = new ToDoService();
 
     public void init() {
